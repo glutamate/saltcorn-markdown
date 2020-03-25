@@ -14,6 +14,7 @@ module.exports = {
       v || ""
     ),
   showAs: v => md.render(v),
+  listAs: v=> v.length >10 ? v.substring(0,10): v,
   read: v => {
     switch (typeof v) {
       case "string":
