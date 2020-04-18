@@ -9,7 +9,8 @@ module.exports = {
       {
         class: `form-control ${cls || ""}`,
         name: nm,
-        id: `input${nm}`
+        id: `input${nm}`,
+        rows: 10
       },
       v || ""
     ),
