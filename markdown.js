@@ -1,4 +1,4 @@
-const { textarea } = require("saltcorn-markup/tags");
+const { textarea, text } = require("saltcorn-markup/tags");
 const md = require("markdown-it")();
 
 module.exports = {
@@ -6,18 +6,21 @@ module.exports = {
   sql_name: "text",
   fieldviews: {
     showAll: { isEdit: false, run: v => md.render(v) },
-    peek: { isEdit: false, run: v => (v.length > 10 ? v.substring(0, 10) : v) },
+    peek: {
+      isEdit: false,
+      run: v => text(v.length > 10 ? v.substring(0, 10) : v)
+    },
     edit: {
       isEdit: true,
       run: (nm, v, attrs, cls) =>
         textarea(
           {
             class: ["form-control", cls],
-            name: nm,
-            id: `input${nm}`,
+            name: text(nm),
+            id: `input${text(nm)}`,
             rows: 10
           },
-          v || ""
+          text(v) || ""
         )
     }
   },
@@ -28,6 +31,5 @@ module.exports = {
       default:
         return undefined;
     }
-  },
-  validate: ({ match }) => x => true
+  }
 };
