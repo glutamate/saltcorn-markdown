@@ -12,7 +12,7 @@ module.exports = {
       run: (nm, v, attrs, cls) =>
         textarea(
           {
-            class: `form-control ${cls || ""}`,
+            class: ["form-control", cls],
             name: nm,
             id: `input${nm}`,
             rows: 10
