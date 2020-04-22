@@ -1,7 +1,7 @@
 const { textarea, text } = require("saltcorn-markup/tags");
 const md = require("markdown-it")();
 
-module.exports = {
+const markdown = {
   name: "Markdown",
   sql_name: "text",
   fieldviews: {
@@ -33,3 +33,5 @@ module.exports = {
     }
   }
 };
+
+module.exports = { types: [markdown] };

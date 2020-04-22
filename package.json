@@ -2,10 +2,9 @@
   "name": "saltcorn-markdown",
   "version": "0.0.1",
   "description": "Markdown field plugin",
-  "main": "index.js",
+  "main": "markdown.js",
   "dependencies": {
     "saltcorn-markup": "^0.0.1",
-    "saltcorn-data": "^0.0.1",
     "markdown-it": "^10.0.0"
   },
   "author": "Tom Nielsen",
