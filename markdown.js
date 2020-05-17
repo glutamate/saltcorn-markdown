@@ -34,4 +34,4 @@ const markdown = {
   }
 };
 
-module.exports = { types: [markdown] };
+module.exports = { sc_plugin_api_version: 1, types: [markdown] };
