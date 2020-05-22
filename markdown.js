@@ -1,4 +1,4 @@
-const { textarea, text } = require("saltcorn-markup/tags");
+const { textarea, text } = require("@saltcorn/markup/tags");
 const md = require("markdown-it")();
 
 const markdown = {
