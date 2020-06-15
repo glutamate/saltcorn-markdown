@@ -11,4 +11,9 @@ describe("markdown plugin", () => {
   it("renders simple stuff", () => {
     expect(render("foobar")).toBe("<p>foobar</p>\n");
   });
+  it("renders links as nofollow", () => {
+    expect(render("[FaceBook](https://fb.com)")).toBe(
+      '<p><a href="https://fb.com" rel="nofollow">FaceBook</a></p>\n'
+    );
+  });
 });

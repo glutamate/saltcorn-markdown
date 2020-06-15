@@ -1,5 +1,14 @@
 const { textarea, text } = require("@saltcorn/markup/tags");
-const md = require("markdown-it")();
+const iterator = require("markdown-it-for-inline");
+
+const md = require("markdown-it")().use(
+  iterator,
+  "nofollow_links",
+  "link_open",
+  function(tokens, idx) {
+    tokens[idx].attrPush(["rel", "nofollow"]);
+  }
+);
 
 const markdown = {
   name: "Markdown",
