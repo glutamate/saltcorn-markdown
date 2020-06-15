@@ -1,12 +1,23 @@
 {
   "name": "@saltcorn/markdown",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Markdown field plugin",
   "main": "markdown.js",
   "dependencies": {
-    "@saltcorn/markup": "^0.0.2",
+    "@saltcorn/markup": "^0.0.8",
     "markdown-it": "^10.0.0"
   },
   "author": "Tom Nielsen",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^25.1.0",
+    "@saltcorn/data": "^0.0.8"
+  },
+  "repository": "github:saltcorn/markdown",
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "scripts": {
+    "test": "jest"
+  }
 }
