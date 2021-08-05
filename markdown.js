@@ -17,7 +17,7 @@ const markdown = {
     showAll: { isEdit: false, run: (v) => md.render(v || "") },
     peek: {
       isEdit: false,
-      run: (v) => text(v.length > 10 ? v.substring(0, 10) : v),
+      run: (v) => text(v && v.length > 10 ? v.substring(0, 10) : v || ""),
     },
     edit: {
       isEdit: true,
