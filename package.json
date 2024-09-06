@@ -4,7 +4,7 @@
   "description": "Markdown field plugin",
   "main": "markdown.js",
   "dependencies": {
-    "@saltcorn/markup": "^0.0.8",
+    "@saltcorn/markup": "^0.6.2",
     "markdown-it": "^10.0.0",
     "markdown-it-for-inline": "^0.1.1"
   },
