@@ -47,4 +47,5 @@ module.exports = {
   sc_plugin_api_version: 1,
   types: [markdown],
   functions: { md_to_html: (m) => md.render(m || "") },
+  ready_for_mobile: true,
 };
