@@ -14,7 +14,10 @@
     "jest": "^25.1.0",
     "@saltcorn/data": "^0.0.8"
   },
-  "repository": "github:saltcorn/markdown",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saltcorn/markdown.git"
+  },
   "jest": {
     "testEnvironment": "node"
   },
